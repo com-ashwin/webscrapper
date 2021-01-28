@@ -1,0 +1,7 @@
+global response,htmlContent,soup,all_content,url
+url=input()
+response=requests.get(url)     #request the url content
+htmlContent=response.content
+soup=BeautifulSoup(htmlContent,'html.parser')
+all_content=soup.prettify()
+        
